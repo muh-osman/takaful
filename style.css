@@ -130,7 +130,8 @@ a {
 }
 
 .navbar-botton p {
-  color: #234580;
+  /* color: #234580; */
+  color: #0d6efd !important;
   font-size: 16px;
   font-weight: 500;
   margin: 0;
@@ -140,7 +141,7 @@ a {
 .navbar-botton .active,
 .navbar-botton .active p {
   /* transform: scale(1.1); */
-  color: #0d6efd !important;
+  /* color: #0d6efd !important; */
 }
 
 @media (max-width: 575.98px) {
