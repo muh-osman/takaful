@@ -27,6 +27,10 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+ul {
+  list-style: none;
+}
+
 
 
 
@@ -400,3 +404,89 @@ label {
 
 
 /* Contact us */
+.contact {
+  text-align: center;
+  padding: 16px;
+  background-color: #fff;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.contact p{
+  width: 80%;
+  margin: auto;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.contact a{
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: #0daae0;
+  padding: 16px 22px;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 32px;
+  margin: auto;
+  display: block;
+  width: fit-content;
+  transition: .2s;
+  margin-top: 32px;
+}
+
+
+.contact a:hover {
+  background-color: #234580;
+}
+
+
+@media (max-width: 575.98px) {
+  .contact p{
+    width: 100%;
+    font-size: 19px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+  background-color: #333;
+  padding: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-bottom: 110px;
+  text-align: center;
+}
+
+footer p{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  white-space:nowrap;
+}
+
+footer a.phone{
+  color: #38bbe6;
+  font-size: 22px;
+  font-weight: 500;
+  width: fit-content;
+  text-align: center;
+  margin: auto;
+}
+
+footer a:hover{
+  color: #75d6f7;
+}
+
+footer p.copyright {
+  font-size: 22px !important;
+  color: #515151;
+}
