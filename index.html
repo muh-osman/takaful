@@ -237,7 +237,19 @@
     <div class="form-section" id="form">
       <div class="form_box">
         <h1 class="text-center">طلب بطاقة جديدة</h1>
+
         <form>
+
+          <div class="mb-4">
+            <label for="offers" class="form-label">اختر العرض المناسب لك :<span>*</span></label>
+            <select class="form-select" id="offers" aria-label="Default select example" required>
+              <option value="بطاقة واحدة لمدة سنتين بـ 200 ريال" selected>بطاقة واحدة لمدة سنتين بـ 200 ريال</option>
+              <option value="بطاقتين لمدة سنة بـ 200 ريال">بطاقتين لمدة سنة بـ 200 ريال</option>
+              <option value="بطاقتين لمدة سنتين بـ 300 ريال">بطاقتين لمدة سنتين بـ 300 ريال</option>
+              <option value="4 بطاقات لمدة سنة بـ 300 ريال">4 بطاقات لمدة سنة بـ 300 ريال</option>
+            </select>
+          </div>
+
           <div class="mb-4">
             <label for="name" class="form-label">الإسم:<span>*</span></label>
             <input
@@ -289,32 +301,53 @@
               required
             >
               <option value="" selected disabled>اختر مدينة</option>
-              <option value="3">الرياض</option>
-              <option value="1">جدة</option>
-              <option value="2">مكة</option>
-              <option value="2">المدينة المنورة</option>
-              <option value="2">الدمام</option>
-              <option value="2">تبوك</option>
-              <option value="2">بريدة</option>
-              <option value="2">الطائف</option>
-              <option value="2">خميس مشيط</option>
-              <option value="2">حائل</option>
-              <option value="2">الهفوف</option>
-              <option value="2">الخبر</option>
-              <option value="2">حفر الباطن</option>
-              <option value="2">نجران</option>
-              <option value="2">أبها</option>
-              <option value="2">الجبيل</option>
-              <option value="2">المبرَّز</option>
-              <option value="2">ينبع</option>
-              <option value="2">سكاكا</option>
-              <option value="2">عرعر</option>
-              <option value="2">عنيزة</option>
-              <option value="2">جيزان</option>
-              <option value="2">القريات</option>
-              <option value="2">الظهران</option>
-              <option value="2">الباحة</option>
-              <option value="2">القطيف</option>
+              <option value="الرياض">الرياض</option>
+              <option value="جدة">جدة</option>
+              <option value="مكة">مكة</option>
+              <option value="المدينة المنورة">المدينة المنورة</option>
+              <option value="الدمام">الدمام</option>
+              <option value="تبوك">تبوك</option>
+              <option value="بريدة">بريدة</option>
+              <option value="الطائف">الطائف</option>
+              <option value="خميس مشيط">خميس مشيط</option>
+              <option value="حائل">حائل</option>
+              <option value="الهفوف">الهفوف</option>
+              <option value="الخبر">الخبر</option>
+              <option value="حفر الباطن">حفر الباطن</option>
+              <option value="نجران">نجران</option>
+              <option value="أبها">أبها</option>
+              <option value="الجبيل">الجبيل</option>
+              <option value="المبرَّز">المبرَّز</option>
+              <option value="السيح">السيح</option>
+              <option value="ينبع">ينبع</option>
+              <option value="الثقبة">الثقبة</option>
+              <option value="سكاكا">سكاكا</option>
+              <option value="عرعر">عرعر</option>
+              <option value="عنيزة">عنيزة</option>
+              <option value="جيزان">جيزان</option>
+              <option value="الجبيل الصناعية">الجبيل الصناعية</option>
+              <option value="الحوية">الحوية</option>
+              <option value="القريات">القريات</option>
+              <option value="الظهران">الظهران</option>
+              <option value="تاروت">تاروت</option>
+              <option value="بيشة">بيشة</option>
+              <option value="الرس">الرس</option>
+              <option value="محايل عسير">محايل عسير</option>
+              <option value="الباحة">الباحة</option>
+              <option value="شرورة">شرورة</option>
+              <option value="القطيف">القطيف</option>
+              <option value="الدوادمي">الدوادمي</option>
+              <option value="سيهات">سيهات</option>
+              <option value="أحد رفيدة">أحد رفيدة</option>
+              <option value="الخفجي">الخفجي</option>
+              <option value="طبرجل">طبرجل</option>
+              <option value="رايغ">رايغ</option>
+              <option value="صبيا">صبيا</option>
+              <option value="دومة الجندل">دومة الجندل</option>
+              <option value="القنفذة">القنفذة</option>
+              <option value="تيماء">تيماء</option>
+              <option value="مملكة البحرين">مملكة البحرين</option>
+              <option value="اخرى">اخرى</option>
             </select>
           </div>
 
@@ -331,7 +364,115 @@
             />
           </div>
 
-          <button type="submit" class="btn btn-primary d-block submit-btn">
+          <!-- 2 Cards -->
+          <div class="offer-two-cards" id="offer-two-cards">
+            <hr class="mb-4">
+            <h3 class="text-center mb-4 fw-bold">بيانات البطاقة الإضافية</h3>
+            <div class="mb-4">
+              <label for="name-two" class="form-label">الإسم (البطاقة الثانية):<span>*</span></label>
+              <input
+                type="text"
+                placeholder="أدخل اسمك الثلاثي هنا"
+                class="form-control"
+                id="name-two"
+                aria-describedby="name"
+              />
+            </div>
+  
+            <div class="mb-4">
+              <label for="id-two" class="form-label"
+                >رقم الهوية أو جواز السفر (البطاقة الثانية):<span>*</span></label
+              >
+              <input
+                type="number"
+                placeholder="أدخل رقم الهوية أو جواز السفر"
+                class="form-control"
+                id="id-two"
+              />
+            </div>
+          </div>
+
+          <!-- 4 Cards family offer -->
+          <div  class="offer-four-cards" id="offer-four-cards">
+            <hr class="mb-4">
+            <h3 class="text-center mb-4 fw-bold">بيانات البطاقات الإضافية</h3>
+            <div class="mb-4">
+              <label for="name-two-family-offer" class="form-label">الإسم (البطاقة الثانية):<span>*</span></label>
+              <input
+                type="text"
+                placeholder="أدخل اسمك الثلاثي هنا"
+                class="form-control"
+                id="name-two-family-offer"
+                aria-describedby="name"
+              />
+            </div>
+  
+            <div class="mb-4">
+              <label for="id-two-family-offer" class="form-label"
+                >رقم الهوية أو جواز السفر (البطاقة الثانية):<span>*</span></label
+              >
+              <input
+                type="number"
+                placeholder="أدخل رقم الهوية أو جواز السفر"
+                class="form-control"
+                id="id-two-family-offer"
+              />
+            </div>
+
+            <hr>
+            
+            <div class="mb-4">
+              <label for="name-three-family-offer" class="form-label">الإسم (البطاقة الثالثة):<span>*</span></label>
+              <input
+                type="text"
+                placeholder="أدخل اسمك الثلاثي هنا"
+                class="form-control"
+                id="name-three-family-offer"
+                aria-describedby="name"
+              />
+            </div>
+  
+            <div class="mb-4">
+              <label for="id-three-family-offer" class="form-label"
+                >رقم الهوية أو جواز السفر (البطاقة الثالثة):<span>*</span></label
+              >
+              <input
+                type="number"
+                placeholder="أدخل رقم الهوية أو جواز السفر"
+                class="form-control"
+                id="id-three-family-offer"
+              />
+            </div>
+
+            <hr>
+
+            <div class="mb-4">
+              <label for="name-four-family-offer" class="form-label">الإسم (البطاقة الرابعة):<span>*</span></label>
+              <input
+                type="text"
+                placeholder="أدخل اسمك الثلاثي هنا"
+                class="form-control"
+                id="name-four-family-offer"
+                aria-describedby="name"
+              />
+            </div>
+  
+            <div class="mb-4">
+              <label for="id-four-family-offer" class="form-label"
+                >رقم الهوية أو جواز السفر (البطاقة الرابعة):<span>*</span></label
+              >
+              <input
+                type="number"
+                placeholder="أدخل رقم الهوية أو جواز السفر"
+                class="form-control"
+                id="id-four-family-offer"
+              />
+            </div>
+          </div>
+
+
+
+          <button type="submit" class="btn btn-primary d-block submit-btn mt-5">
             اطلب
           </button>
         </form>

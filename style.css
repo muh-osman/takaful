@@ -211,24 +211,31 @@ a {
 .form-section {
   display: flex;
   background-color: #fff;
-  align-items: center;
+  /* align-items: center; */
   margin: 32px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 1px 7px -3px;
+    /* background-color: red; */
+}
+
+input,
+select {
+  background-color: #eee !important;
 }
 
 .form_box {
   padding: 16px;
-  background-color: #fff;
+  /* background-color: blue; */
   width: fit-content;
   margin: auto;
-  margin-top: 16px;
+  margin-top: 0px;
   /* border-radius: 16px; */
   /* margin-bottom: 144px; */
 }
 
 .form_box h1 {
   font-weight: 600;
+  margin-bottom: 32px;
 }
 
 form {
@@ -254,10 +261,24 @@ label {
 .form_box,
 .form-image-box {
   /* background-color: red; */
+  /* height: 100% !important; */
+}
+
+
+.form-image-box {
+  /* background-color: red; */
+  overflow: hidden;
+  height: 100% !important;
 }
 
 .form-image-box img {
-  width: 100%;
+  object-fit: cover;
+  height: 100% !important;
+}
+
+.offer-two-cards,
+.offer-four-cards {
+  display: none;
 }
 
 @media (max-width: 1100px) {
