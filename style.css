@@ -71,6 +71,7 @@ a {
 
 /* Navbar Bottom */
 .navbar-botton {
+  border: 1px solid #0000000f;
   width: 575px;
   display: flex;
   flex-wrap: nowrap;
@@ -280,6 +281,11 @@ label {
   display: none;
 }
 
+.spinner-border {
+  border-color: #fff;
+  border-right-color: transparent;
+}
+
 @media (max-width: 1100px) {
   .form-image-box {
     display: none !important;
@@ -482,4 +488,45 @@ footer a:hover {
 footer p.copyright {
   font-size: 22px !important;
   color: #515151;
+}
+
+/* Thank you page */
+.thankyou {
+  width: 100%;
+  padding: 16px;
+  background-color: #194397;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thankyou img {
+  margin-bottom: 70px;
+  margin-top: 70px;
+}
+
+.thankyou h1 {
+  margin-bottom: 50px;
+}
+
+.thankyou h4 {
+  color: #d1d1d1;
+  margin-bottom: 50px;
+}
+
+.thankyou a {
+  margin-bottom: 40px;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: 0.2s;
+  border-radius: 8px;
+}
+
+.thankyou a:hover {
+  color: #194397;
+  background-color: #fff;
 }

@@ -11,6 +11,9 @@ let extraInputsTitle = document.getElementById("extra-inputs-title");
 let colectionTwo = document.querySelectorAll(".colection-two");
 let colectionFour = document.querySelectorAll(".colection-four");
 
+// Submit btn
+let submitBtn = document.getElementById("submit-btn");
+
 offers.addEventListener("change", showInputs);
 
 function showInputs() {
@@ -68,11 +71,24 @@ const scriptURL =
 
 const form = document.forms["submit-to-google-sheet"];
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  fetch(scriptURL, { method: "POST", body: new FormData(form) })
-    .then((response) => console.log("Success!", response))
+  submitBtn.setAttribute("disabled", "");
+  submitBtn.innerHTML =
+    '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>';
 
-    .catch((error) => console.error("Error!", error.message));
+  try {
+    const response = await fetch(scriptURL, {
+      method: "POST",
+      body: new FormData(form),
+    });
+    console.log("Success!", response);
+
+    window.location.href = "./thankyou.html";
+  } catch (error) {
+    submitBtn.removeAttribute("disabled");
+    submitBtn.innerHTML = "اطلب";
+    console.error("Error!", error.message);
+  }
 });
