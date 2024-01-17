@@ -63,8 +63,18 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="https://takafulalarabia.com/regions/"
+              <a
+                class="nav-link"
+                href="https://takafulalarabia.com/Mobile/Regions.html"
                 >الشبكة الطبية</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://takafulalarabia.com/Mobile/Coupons.html"
+                >العروض والكوبونات</a
               >
             </li>
 
@@ -79,7 +89,7 @@
     <!-- Navbar in Bottom -->
     <div class="navbar-botton">
       <div>
-        <a href="https://takafulalarabia.com/regions/">
+        <a href="https://takafulalarabia.com/Mobile/Regions.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -238,21 +248,37 @@
       <div class="form_box">
         <h1 class="text-center">طلب بطاقة جديدة</h1>
 
-        <form>
-
+        <form name="submit-to-google-sheet">
           <div class="mb-4">
-            <label for="offers" class="form-label">اختر العرض المناسب لك :<span>*</span></label>
-            <select class="form-select" id="offers" aria-label="Default select example" required>
-              <option value="بطاقة واحدة لمدة سنتين بـ 200 ريال" selected>بطاقة واحدة لمدة سنتين بـ 200 ريال</option>
-              <option value="بطاقتين لمدة سنة بـ 200 ريال">بطاقتين لمدة سنة بـ 200 ريال</option>
-              <option value="بطاقتين لمدة سنتين بـ 300 ريال">بطاقتين لمدة سنتين بـ 300 ريال</option>
-              <option value="4 بطاقات لمدة سنة بـ 300 ريال">4 بطاقات لمدة سنة بـ 300 ريال</option>
+            <label for="offers" class="form-label"
+              >اختر العرض المناسب لك :<span>*</span></label
+            >
+            <select
+              name="offer"
+              class="form-select"
+              id="offers"
+              aria-label="Default select example"
+              required
+            >
+              <option value="بطاقة واحدة لمدة سنتين بـ 200 ريال" selected>
+                بطاقة واحدة لمدة سنتين بـ 200 ريال
+              </option>
+              <option value="بطاقتين لمدة سنة بـ 200 ريال">
+                بطاقتين لمدة سنة بـ 200 ريال
+              </option>
+              <option value="بطاقتين لمدة سنتين بـ 300 ريال">
+                بطاقتين لمدة سنتين بـ 300 ريال
+              </option>
+              <option value="4 بطاقات لمدة سنة بـ 300 ريال">
+                4 بطاقات لمدة سنة بـ 300 ريال
+              </option>
             </select>
           </div>
 
           <div class="mb-4">
             <label for="name" class="form-label">الإسم:<span>*</span></label>
             <input
+              name="name"
               type="text"
               placeholder="أدخل اسمك الثلاثي هنا"
               class="form-control"
@@ -267,6 +293,7 @@
               >رقم الهوية أو جواز السفر:<span>*</span></label
             >
             <input
+              name="id"
               type="number"
               placeholder="أدخل رقم الهوية أو جواز السفر"
               class="form-control"
@@ -282,6 +309,7 @@
             <div class="input-group" dir="ltr">
               <div class="input-group-text">+966</div>
               <input
+                name="phone"
                 dir="rtl"
                 type="number"
                 placeholder="أدخل رقم جوالك الحالي"
@@ -295,6 +323,7 @@
           <div class="mb-4">
             <label for="city" class="form-label">المدينة:<span>*</span></label>
             <select
+              name="city"
               id="city"
               class="form-select"
               aria-label="Default select example"
@@ -356,6 +385,7 @@
               >العنوان:<span>*</span></label
             >
             <input
+              name="address"
               type="text"
               placeholder="أدخل عنوانك الحالي"
               class="form-control"
@@ -366,111 +396,104 @@
 
           <!-- 2 Cards -->
           <div class="offer-two-cards" id="offer-two-cards">
-            <hr class="mb-4">
-            <h3 class="text-center mb-4 fw-bold">بيانات البطاقة الإضافية</h3>
+            <hr />
+            <h3 class="text-center mb-4 fw-bold" id="extra-inputs-title">
+              بيانات البطاقات الإضافية
+            </h3>
             <div class="mb-4">
-              <label for="name-two" class="form-label">الإسم (البطاقة الثانية):<span>*</span></label>
+              <label for="name-two" class="form-label"
+                >الإسم (البطاقة الثانية):<span>*</span></label
+              >
               <input
+                name="name-2"
                 type="text"
                 placeholder="أدخل اسمك الثلاثي هنا"
-                class="form-control"
+                class="form-control colection-two"
                 id="name-two"
                 aria-describedby="name"
               />
             </div>
-  
+
             <div class="mb-4">
               <label for="id-two" class="form-label"
-                >رقم الهوية أو جواز السفر (البطاقة الثانية):<span>*</span></label
+                >رقم الهوية أو جواز السفر (البطاقة الثانية):<span
+                  >*</span
+                ></label
               >
               <input
+                name="id-2"
                 type="number"
                 placeholder="أدخل رقم الهوية أو جواز السفر"
-                class="form-control"
+                class="form-control colection-two"
                 id="id-two"
               />
             </div>
           </div>
 
           <!-- 4 Cards family offer -->
-          <div  class="offer-four-cards" id="offer-four-cards">
-            <hr class="mb-4">
-            <h3 class="text-center mb-4 fw-bold">بيانات البطاقات الإضافية</h3>
+          <div class="offer-four-cards" id="offer-four-cards">
+            <hr class="mb-4" />
+
             <div class="mb-4">
-              <label for="name-two-family-offer" class="form-label">الإسم (البطاقة الثانية):<span>*</span></label>
-              <input
-                type="text"
-                placeholder="أدخل اسمك الثلاثي هنا"
-                class="form-control"
-                id="name-two-family-offer"
-                aria-describedby="name"
-              />
-            </div>
-  
-            <div class="mb-4">
-              <label for="id-two-family-offer" class="form-label"
-                >رقم الهوية أو جواز السفر (البطاقة الثانية):<span>*</span></label
+              <label for="name-three-family-offer" class="form-label"
+                >الإسم (البطاقة الثالثة):<span>*</span></label
               >
               <input
-                type="number"
-                placeholder="أدخل رقم الهوية أو جواز السفر"
-                class="form-control"
-                id="id-two-family-offer"
-              />
-            </div>
-
-            <hr>
-            
-            <div class="mb-4">
-              <label for="name-three-family-offer" class="form-label">الإسم (البطاقة الثالثة):<span>*</span></label>
-              <input
+                name="name-3"
                 type="text"
                 placeholder="أدخل اسمك الثلاثي هنا"
-                class="form-control"
+                class="form-control colection-four"
                 id="name-three-family-offer"
                 aria-describedby="name"
               />
             </div>
-  
+
             <div class="mb-4">
               <label for="id-three-family-offer" class="form-label"
-                >رقم الهوية أو جواز السفر (البطاقة الثالثة):<span>*</span></label
+                >رقم الهوية أو جواز السفر (البطاقة الثالثة):<span
+                  >*</span
+                ></label
               >
               <input
+                name="id-3"
                 type="number"
                 placeholder="أدخل رقم الهوية أو جواز السفر"
-                class="form-control"
+                class="form-control colection-four"
                 id="id-three-family-offer"
               />
             </div>
 
-            <hr>
+            <hr />
 
             <div class="mb-4">
-              <label for="name-four-family-offer" class="form-label">الإسم (البطاقة الرابعة):<span>*</span></label>
+              <label for="name-four-family-offer" class="form-label"
+                >الإسم (البطاقة الرابعة):<span>*</span></label
+              >
               <input
+                name="name-4"
                 type="text"
                 placeholder="أدخل اسمك الثلاثي هنا"
-                class="form-control"
+                class="form-control colection-four"
                 id="name-four-family-offer"
                 aria-describedby="name"
               />
             </div>
-  
+
             <div class="mb-4">
               <label for="id-four-family-offer" class="form-label"
-                >رقم الهوية أو جواز السفر (البطاقة الرابعة):<span>*</span></label
+                >رقم الهوية أو جواز السفر (البطاقة الرابعة):<span
+                  >*</span
+                ></label
               >
               <input
+                name="id-4"
                 type="number"
                 placeholder="أدخل رقم الهوية أو جواز السفر"
-                class="form-control"
+                class="form-control colection-four"
                 id="id-four-family-offer"
               />
             </div>
           </div>
-
-
 
           <button type="submit" class="btn btn-primary d-block submit-btn mt-5">
             اطلب
@@ -611,8 +634,8 @@
       <a class="phone" href="tel:0570707043"
         >0570707043 <i class="bi bi-telephone-fill"></i
       ></a>
-      <a class="phone" href="https://wa.me/00966599991959"
-        >0599991959 <i class="bi bi-whatsapp"></i
+      <a class="phone" href="https://wa.me/00966581929048"
+        >0581929048 <i class="bi bi-whatsapp"></i
       ></a>
       <p class="copyright mt-2" dir="ltr">
         <span
