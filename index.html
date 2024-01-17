@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>تكافل العربية للرعاية الصحية</title>
+    <!-- Meta -->
+    <link rel="icon" href="./favicon.ico">
+    <meta name="description" content="تكافل العربية للرعاية الصحية | أقوى بطاقة خصم طبي وعلاج نقدي في المملكة العربية السعودية والبحرين">
     <!-- Bootstrap CSS file -->
     <link rel="stylesheet" href="./bootstrap.min.css" />
     <!-- CSS file -->
@@ -25,7 +28,7 @@
     <!-- Navbar in top -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container nav-box">
-        <a class="navbar-brand m-0 py-0" href="#">
+        <a class="navbar-brand m-0 py-0" href="https://takafulalarabia.netlify.app/">
           <img src="./images/logo.png" alt="logo" />
         </a>
         <button
@@ -223,104 +226,112 @@
     </div>
 
     <!-- Form -->
-    <div class="form_box" id="form">
-      <h1 class="text-center">طلب بطاقة جديدة</h1>
-      <form>
-        <div class="mb-4">
-          <label for="name" class="form-label">الإسم:<span>*</span></label>
-          <input
-            type="text"
-            placeholder="أدخل اسمك الثلاثي هنا"
-            class="form-control"
-            id="name"
-            aria-describedby="name"
-            required
-          />
-        </div>
-
-        <div class="mb-4">
-          <label for="id" class="form-label"
-            >رقم الهوية أو جواز السفر:<span>*</span></label
-          >
-          <input
-            type="number"
-            placeholder="أدخل رقم الهوية أو جواز السفر"
-            class="form-control"
-            id="id"
-            required
-          />
-        </div>
-
-        <div class="mb-4">
-          <label for="phone" class="form-label"
-            >رقم الجوال:<span>*</span></label
-          >
-          <div class="input-group" dir="ltr">
-            <div class="input-group-text">+966</div>
+    <div class="form-section" id="form">
+      <div class="form_box">
+        <h1 class="text-center">طلب بطاقة جديدة</h1>
+        <form>
+          <div class="mb-4">
+            <label for="name" class="form-label">الإسم:<span>*</span></label>
             <input
-              dir="rtl"
-              type="number"
-              placeholder="أدخل رقم جوالك الحالي"
+              type="text"
+              placeholder="أدخل اسمك الثلاثي هنا"
               class="form-control"
-              id="phone"
+              id="name"
+              aria-describedby="name"
               required
             />
           </div>
-        </div>
 
-        <div class="mb-4">
-          <label for="city" class="form-label">المدينة:<span>*</span></label>
-          <select
-            id="city"
-            class="form-select"
-            aria-label="Default select example"
-            required
-          >
-            <option value="" selected disabled>اختر مدينة</option>
-            <option value="3">الرياض</option>
-            <option value="1">جدة</option>
-            <option value="2">مكة</option>
-            <option value="2">المدينة المنورة</option>
-            <option value="2">الدمام</option>
-            <option value="2">تبوك</option>
-            <option value="2">بريدة</option>
-            <option value="2">الطائف</option>
-            <option value="2">خميس مشيط</option>
-            <option value="2">حائل</option>
-            <option value="2">الهفوف</option>
-            <option value="2">الخبر</option>
-            <option value="2">حفر الباطن</option>
-            <option value="2">نجران</option>
-            <option value="2">أبها</option>
-            <option value="2">الجبيل</option>
-            <option value="2">المبرَّز</option>
-            <option value="2">ينبع</option>
-            <option value="2">سكاكا</option>
-            <option value="2">عرعر</option>
-            <option value="2">عنيزة</option>
-            <option value="2">جيزان</option>
-            <option value="2">القريات</option>
-            <option value="2">الظهران</option>
-            <option value="2">الباحة</option>
-            <option value="2">القطيف</option>
-          </select>
-        </div>
+          <div class="mb-4">
+            <label for="id" class="form-label"
+              >رقم الهوية أو جواز السفر:<span>*</span></label
+            >
+            <input
+              type="number"
+              placeholder="أدخل رقم الهوية أو جواز السفر"
+              class="form-control"
+              id="id"
+              required
+            />
+          </div>
 
-        <div class="mb-4">
-          <label for="adress" class="form-label">العنوان:<span>*</span></label>
-          <input
-            type="text"
-            placeholder="أدخل عنوانك الحالي"
-            class="form-control"
-            id="adress"
-            required
-          />
-        </div>
+          <div class="mb-4">
+            <label for="phone" class="form-label"
+              >رقم الجوال:<span>*</span></label
+            >
+            <div class="input-group" dir="ltr">
+              <div class="input-group-text">+966</div>
+              <input
+                dir="rtl"
+                type="number"
+                placeholder="أدخل رقم جوالك الحالي"
+                class="form-control"
+                id="phone"
+                required
+              />
+            </div>
+          </div>
 
-        <button type="submit" class="btn btn-primary d-block mx-auto">
-          اطلب
-        </button>
-      </form>
+          <div class="mb-4">
+            <label for="city" class="form-label">المدينة:<span>*</span></label>
+            <select
+              id="city"
+              class="form-select"
+              aria-label="Default select example"
+              required
+            >
+              <option value="" selected disabled>اختر مدينة</option>
+              <option value="3">الرياض</option>
+              <option value="1">جدة</option>
+              <option value="2">مكة</option>
+              <option value="2">المدينة المنورة</option>
+              <option value="2">الدمام</option>
+              <option value="2">تبوك</option>
+              <option value="2">بريدة</option>
+              <option value="2">الطائف</option>
+              <option value="2">خميس مشيط</option>
+              <option value="2">حائل</option>
+              <option value="2">الهفوف</option>
+              <option value="2">الخبر</option>
+              <option value="2">حفر الباطن</option>
+              <option value="2">نجران</option>
+              <option value="2">أبها</option>
+              <option value="2">الجبيل</option>
+              <option value="2">المبرَّز</option>
+              <option value="2">ينبع</option>
+              <option value="2">سكاكا</option>
+              <option value="2">عرعر</option>
+              <option value="2">عنيزة</option>
+              <option value="2">جيزان</option>
+              <option value="2">القريات</option>
+              <option value="2">الظهران</option>
+              <option value="2">الباحة</option>
+              <option value="2">القطيف</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label for="adress" class="form-label">العنوان:<span>*</span></label>
+            <input
+              type="text"
+              placeholder="أدخل عنوانك الحالي"
+              class="form-control"
+              id="adress"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary d-block submit-btn">
+            اطلب
+          </button>
+        </form>
+
+        <p class="text-center mt-5" style="color: #929292; font-size: 14px;">بطلبك البطاقة فانت توافق علي <a class="d-inline" href="https://takafulalarabia.com/landingpage/Privacy.html">سياسة الخصوصية</a> الخاصة بنا</p>
+      </div>
+
+      <div class="form-image-box">
+        <img src="./images/form-image.jpg" alt="form image">
+      </div>
     </div>
 
     <!-- Features -->
@@ -441,7 +452,7 @@
       <a class="phone" href="tel:0570707043"
         >0570707043 <i class="bi bi-telephone-fill"></i
       ></a>
-      <a class="phone" href="tel:0570707043">0570707043 <i class="bi bi-whatsapp"></i></a>
+      <a class="phone" href="https://wa.me/00966599991959">0599991959 <i class="bi bi-whatsapp"></i></a>
       <p class="copyright mt-2" dir="ltr">
         <span
           ><svg
@@ -460,7 +471,7 @@
         ></span>
         2024 All rights reserved.
       </p>
-      <p class="m-0">
+      <p class="m-0" style="font-weight: 400;">
         Made with
         <span
           ><svg
