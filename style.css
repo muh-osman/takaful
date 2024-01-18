@@ -531,3 +531,19 @@ footer p.copyright {
   color: #194397;
   background-color: #fff;
 }
+
+
+
+
+/* Privacy */
+.privacy {
+  padding: 32px;
+  background-color: #194397;
+  color: #fff;
+  text-align: center;
+}
+
+.privacy ul{
+  list-style: circle !important;
+  padding: 0;
+}
