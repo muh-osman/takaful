@@ -42,6 +42,18 @@ nav {
   flex-direction: row-reverse;
 }
 
+.offcanvas {
+  background-color: #38bbe6 !important;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid #fff !important;
+}
+
+.reverse-logo {
+  width: 250px;
+}
+
 li,
 a {
   height: 100% !important;
@@ -72,7 +84,7 @@ a {
 
 /* Navbar Bottom */
 .navbar-botton {
-  border: 1px solid #0000000f;
+  border: 1px solid #eee;
   width: 575px;
   display: flex;
   flex-wrap: nowrap;
@@ -146,13 +158,42 @@ a {
 
 /* Hero */
 .carousel-item img {
-  filter: grayscale(1);
-  position: relative;
+  /* filter: grayscale(1); */
+  /* position: relative; */
 }
+
+.carousel-inner {
+  background-image: url(./images/hero1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 217px; */
+  aspect-ratio: 16 / 9;
+  
+  /* position: relative; */
+}
+
+.carousel-item {
+  position: relative;
+  /* height: fit-content !important; */
+  /* height: 217px; */
+  aspect-ratio: 16 / 9;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+/* .carousel-inner a {
+  height: fit-content !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
 
 .carousel-item div {
   position: absolute;
   width: 90%;
+  /* height: 217px; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -184,6 +225,7 @@ a {
   /* color: #0d6efd !important; */
   font-size: 44px;
   font-weight: 600;
+  margin: 0;
 }
 
 @media (max-width: 575.98px) {
