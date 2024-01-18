@@ -71,7 +71,9 @@ a {
 }
 
 .nav-box .nav-item :hover {
-  background-color: #234580;
+  /* background-color: #234580; */
+  background-color: #fff;
+  color: #38bbe6 !important;
 }
 
 .bg-body-tertiary {
