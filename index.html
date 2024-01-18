@@ -101,12 +101,13 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
+        style="width: fit-content;"
           class="offcanvas offcanvas-end"
           tabindex="-1"
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
         >
-          <div class="offcanvas-header">
+          <div class="offcanvas-header py-0">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
               <img
                 class="reverse-logo"
@@ -116,7 +117,7 @@
             </h5>
             <button
               type="button"
-              class="btn-close"
+              class="btn-close d-none"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
@@ -124,20 +125,20 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav flex-grow-1 px-0 mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="#form"
+                <a class="nav-link anchor" href="#form"
                   ><i class="bi bi-person-vcard-fill uniform-icon"></i>
                   التسجيل</a
                 >
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#benefit"
+                <a class="nav-link anchor" href="#benefit"
                   ><i class="bi bi-stars uniform-icon"></i> فائدة البطاقة</a
                 >
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#video"
+                <a class="nav-link anchor" href="#video"
                   ><i class="bi bi-star-fill uniform-icon"></i> ميزات البطاقة</a
                 >
               </li>
@@ -161,7 +162,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#contact"
+                <a class="nav-link anchor" href="#contact"
                   ><i class="bi bi-telephone-fill uniform-icon"></i> تواصل
                   معنا</a
                 >
@@ -770,7 +771,7 @@
       </p>
     </footer>
 
-    <script src="./app.js"></script>
     <script src="./bootstrap.bundle.min.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>

@@ -92,3 +92,19 @@ form.addEventListener("submit", async (e) => {
     console.error("Error!", error.message);
   }
 });
+
+// Hide sidebar(offcanvas) when click on any nav link in small screen
+let navLinks = document.querySelectorAll(".anchor");
+
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", clickOnCloseBtn);
+});
+
+function clickOnCloseBtn() {
+  let btn = document.getElementsByClassName("btn-close")[0];
+
+  btn.click();
+}
+
+
+// 
