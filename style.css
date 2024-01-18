@@ -35,6 +35,7 @@ ul {
 
 nav {
   padding: 0 !important;
+  white-space: nowrap;
 }
 
 .nav-box {
