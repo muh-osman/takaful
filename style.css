@@ -148,6 +148,17 @@ a {
   /* color: #0d6efd !important; */
 }
 
+.uniform-icon {
+  font-size: 32px;
+  margin-left: 18px;
+}
+
+@media (min-width: 991px) {
+  .uniform-icon {
+    display: none !important;
+  }
+}
+
 @media (max-width: 575.98px) {
   .navbar-botton {
     width: 375px;
@@ -171,7 +182,7 @@ a {
   background-size: cover;
   /* height: 217px; */
   aspect-ratio: 16 / 9;
-  
+
   /* position: relative; */
 }
 

@@ -29,59 +29,88 @@
   </head>
   <body dir="rtl">
     <!-- Navbar in top -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar bg-light navbar-expand-lg bg-body-tertiary">
       <div class="container nav-box">
-        <a
-          class="navbar-brand m-0 py-0"
-          href="https://takafulalarabia.netlify.app/"
-        >
+        <a class="navbar-brand p-0" href="#">
           <img src="./images/logo.png" alt="logo" />
         </a>
         <button
           class="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html#form">التسجيل</a>
-            </li>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <img
+                class="reverse-logo"
+                src="./images/logo-reverse.png"
+                alt="logo"
+              />
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav flex-grow-1 px-0 mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#form"
+                  ><i class="bi bi-person-vcard-fill uniform-icon"></i>
+                  التسجيل</a
+                >
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html#benefit">فائدة البطاقة</a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#benefit"
+                  ><i class="bi bi-stars uniform-icon"></i> فائدة البطاقة</a
+                >
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html#video">ميزات البطاقة</a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#video"
+                  ><i class="bi bi-star-fill uniform-icon"></i> ميزات البطاقة</a
+                >
+              </li>
 
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://takafulalarabia.com/Mobile/Regions.html"
-                >الشبكة الطبية</a
-              >
-            </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://takafulalarabia.com/Mobile/Regions.html"
+                  ><i class="bi bi-heart-pulse-fill uniform-icon"></i> الشبكة
+                  الطبية</a
+                >
+              </li>
 
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://takafulalarabia.com/Mobile/Coupons.html"
-                >العروض والكوبونات</a
-              >
-            </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://takafulalarabia.com/Mobile/Coupons.html"
+                  ><i class="bi bi-piggy-bank-fill uniform-icon"></i> العروض
+                  والكوبونات</a
+                >
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html#contact">تواصل معنا</a>
-            </li>
-          </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#contact"
+                  ><i class="bi bi-telephone-fill uniform-icon"></i> تواصل
+                  معنا</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
