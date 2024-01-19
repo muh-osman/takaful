@@ -5239,6 +5239,8 @@
       // focus on trigger when it is closed
       if (isVisible(this)) {
         // this.focus();
+        // 
+        // muh
       }
     }); // avoid conflict when clicking a toggler of an offcanvas, while another is open
 
