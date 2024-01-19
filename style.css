@@ -107,6 +107,12 @@ a {
   a.nav-link {
     padding-right: 18px !important;
   }
+
+  .navbar-brand {
+    flex: 1;
+    text-align: center;
+    padding-left: 54px !important;
+  }
 }
 
 /* Navbar Bottom */
