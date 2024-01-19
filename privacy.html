@@ -11,7 +11,7 @@
       content="تكافل العربية للرعاية الصحية | أقوى بطاقة خصم طبي وعلاج نقدي في المملكة العربية السعودية والبحرين"
     />
     <!-- Bootstrap CSS file -->
-    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css" />
     <!-- CSS file -->
     <link rel="stylesheet" href="./style.css" />
     <!-- Bootstrap Icons -->
@@ -31,7 +31,7 @@
     <!-- Navbar in top -->
     <nav class="navbar bg-light navbar-expand-lg bg-body-tertiary">
       <div class="container nav-box">
-        <a class="navbar-brand p-0" href="#">
+        <a class="navbar-brand p-0" href="https://takafulalarabia.netlify.app/">
           <img src="./images/logo.png" alt="logo" />
         </a>
         <button
@@ -44,12 +44,13 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
+          style="width: fit-content"
           class="offcanvas offcanvas-end"
           tabindex="-1"
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
         >
-          <div class="offcanvas-header">
+          <div class="offcanvas-header py-0">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
               <img
                 class="reverse-logo"
@@ -59,7 +60,7 @@
             </h5>
             <button
               type="button"
-              class="btn-close"
+              class="btn-close d-none"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
@@ -67,27 +68,27 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav flex-grow-1 px-0 mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="./index.html#form"
+                <a class="nav-link anchor" href="./index.html#form"
                   ><i class="bi bi-person-vcard-fill uniform-icon"></i>
                   التسجيل</a
                 >
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="./index.html#benefit"
+                <a class="nav-link anchor" href="./index.html#benefit"
                   ><i class="bi bi-stars uniform-icon"></i> فائدة البطاقة</a
                 >
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="./index.html#video"
+                <a class="nav-link anchor" href="./index.html#video"
                   ><i class="bi bi-star-fill uniform-icon"></i> ميزات البطاقة</a
                 >
               </li>
 
               <li class="nav-item">
                 <a
-                  class="nav-link"
+                  class="nav-link anchor"
                   href="https://takafulalarabia.com/Mobile/Regions.html"
                   ><i class="bi bi-heart-pulse-fill uniform-icon"></i> الشبكة
                   الطبية</a
@@ -96,7 +97,7 @@
 
               <li class="nav-item">
                 <a
-                  class="nav-link"
+                  class="nav-link anchor"
                   href="https://takafulalarabia.com/Mobile/Coupons.html"
                   ><i class="bi bi-piggy-bank-fill uniform-icon"></i> العروض
                   والكوبونات</a
@@ -104,7 +105,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="./index.html#contact"
+                <a class="nav-link anchor" href="#contact"
                   ><i class="bi bi-telephone-fill uniform-icon"></i> تواصل
                   معنا</a
                 >
@@ -304,7 +305,20 @@
       </p>
     </footer>
 
-    <!-- <script src="./app.js"></script> -->
-    <script src="./bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- Hide sidebar(offcanvas) when click on any nav-link in small screen -->
+    <script>
+      let navLinks = document.querySelectorAll(".anchor");
+
+      navLinks.forEach((navLink) => {
+        navLink.addEventListener("click", clickOnCloseBtn);
+      });
+
+      function clickOnCloseBtn() {
+        let btn = document.getElementsByClassName("btn-close")[0];
+        btn.click();
+      }
+    </script>
   </body>
 </html>

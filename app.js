@@ -102,9 +102,5 @@ navLinks.forEach((navLink) => {
 
 function clickOnCloseBtn() {
   let btn = document.getElementsByClassName("btn-close")[0];
-
   btn.click();
 }
-
-
-// 
