@@ -83,6 +83,17 @@ a {
   color: #fff !important;
 }
 
+.search-icon {
+  display: none;
+  width: 54px;
+  text-align: center;
+}
+
+.search-icon i{
+  color: #194397;
+  font-size: 23px;
+}
+
 .bg-body-tertiary {
   /* background-color: #38bbe6 !important; */
 }
@@ -115,7 +126,11 @@ a {
   .navbar-brand {
     flex: 1;
     text-align: center;
-    padding-left: 54px !important;
+    /* padding-left: 54px !important; */
+  }
+
+  .search-icon {
+    display: block;
   }
 }
 
