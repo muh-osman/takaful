@@ -11,6 +11,27 @@ body {
   background-color: #eee;
 }
 
+.whatsapp-icon {
+  position: fixed;
+  bottom: 115px;
+  right: 16px;
+  z-index: 1000;
+}
+
+.whatsapp-icon img {
+  width: 65px;
+}
+
+@media (min-width: 800px) {
+  .whatsapp-icon {
+    bottom: 16px;
+  }
+
+  .whatsapp-icon img {
+    width: 70px;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -89,7 +110,7 @@ a {
   text-align: center;
 }
 
-.search-icon i{
+.search-icon i {
   color: #194397;
   font-size: 23px;
 }

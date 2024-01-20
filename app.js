@@ -1,8 +1,16 @@
-// Show\hide inputs depends on selected offer
-let offers = document.getElementById("offers");
+// All Offers
+let offers = {
+  offerOne: "بطاقة واحدة لمدة سنتين بـ 200 ريال",
+  offerTwo: "بطاقتين لمدة سنة بـ 200 ريال",
+  offerThree: "بطاقتين لمدة سنتين بـ 300 ريال",
+  offerFour: "4 بطاقات لمدة سنة بـ 300 ريال",
+};
 
-let twoCardOffer = document.getElementById("offer-two-cards");
-let fourCardOffer = document.getElementById("offer-four-cards");
+// Show\hide inputs depends on selected offer
+let offersSelect = document.getElementById("offers");
+
+let inputsTwoCard = document.getElementById("offer-two-cards");
+let inputsFourCard = document.getElementById("offer-four-cards");
 
 // Change hiden inputs title "بيانات البطاقات الإضافية" or "بيانات البطاقة الإضافية"
 let extraInputsTitle = document.getElementById("extra-inputs-title");
@@ -11,15 +19,27 @@ let extraInputsTitle = document.getElementById("extra-inputs-title");
 let colectionTwo = document.querySelectorAll(".colection-two");
 let colectionFour = document.querySelectorAll(".colection-four");
 
-// Submit btn
+// Submit button
 let submitBtn = document.getElementById("submit-btn");
 
-offers.addEventListener("change", showInputs);
+// Add
+const applyOffersToHtml = () => {
+  for (let key in offers) {
+    let optionElement = document.createElement("option");
+    optionElement.value = offers[key];
+    optionElement.textContent = offers[key];
+    offersSelect.appendChild(optionElement);
+  }
+};
+
+applyOffersToHtml();
+
+offersSelect.addEventListener("change", showInputs);
 
 function showInputs() {
-  let selectedOffer = offers.value;
-  //   console.log(selectedOffer);
-  if (selectedOffer === "بطاقة واحدة لمدة سنتين بـ 200 ريال") {
+  let selectedOffer = offersSelect.value;
+  if (selectedOffer === offers.offerOne) {
+    console.log(1);
     // Remove "required" from hiden inputs  (colectionTwo & colectionFour)
     for (let i = 0; i < colectionTwo.length; i++) {
       colectionTwo[i].removeAttribute("required");
@@ -29,12 +49,13 @@ function showInputs() {
     }
 
     // Hide inputs
-    twoCardOffer.style.display = "none";
-    fourCardOffer.style.display = "none";
+    inputsTwoCard.style.display = "none";
+    inputsFourCard.style.display = "none";
   } else if (
-    selectedOffer === "بطاقتين لمدة سنة بـ 200 ريال" ||
-    selectedOffer === "بطاقتين لمدة سنتين بـ 300 ريال"
+    selectedOffer === offers.offerTwo ||
+    selectedOffer === offers.offerThree
   ) {
+    console.log("2 or 3");
     // Remove "required" from hiden inputs (colectionFour)
     for (let i = 0; i < colectionFour.length; i++) {
       colectionFour[i].removeAttribute("required");
@@ -46,9 +67,10 @@ function showInputs() {
     }
 
     extraInputsTitle.innerHTML = "بيانات البطاقة الإضافية";
-    twoCardOffer.style.display = "block";
-    fourCardOffer.style.display = "none";
-  } else if (selectedOffer === "4 بطاقات لمدة سنة بـ 300 ريال") {
+    inputsTwoCard.style.display = "block";
+    inputsFourCard.style.display = "none";
+  } else if (selectedOffer === offers.offerFour) {
+    console.log(4);
     // Add "required" to showen inputs (colectionFour)
     for (let i = 0; i < colectionFour.length; i++) {
       colectionFour[i].setAttribute("required", "");
@@ -60,8 +82,8 @@ function showInputs() {
     }
 
     extraInputsTitle.innerHTML = "بيانات البطاقات الإضافية";
-    twoCardOffer.style.display = "block";
-    fourCardOffer.style.display = "block";
+    inputsTwoCard.style.display = "block";
+    inputsFourCard.style.display = "block";
   }
 }
 
@@ -83,6 +105,7 @@ form.addEventListener("submit", async (e) => {
       method: "POST",
       body: new FormData(form),
     });
+
     console.log("Success!", response);
 
     window.location.href = "./thankyou.html";
