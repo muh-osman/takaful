@@ -6,9 +6,10 @@ let offers = {
   offerFour: "4 بطاقات لمدة سنة بـ 300 ريال",
 };
 
-// Show\hide inputs depends on selected offer
-let offersSelect = document.getElementById("offers");
+// Select element <select></select>
+let selectElement = document.getElementById("offers");
 
+// Show\hide inputs depends on selected offer
 let inputsTwoCard = document.getElementById("offer-two-cards");
 let inputsFourCard = document.getElementById("offer-four-cards");
 
@@ -19,28 +20,24 @@ let extraInputsTitle = document.getElementById("extra-inputs-title");
 let colectionTwo = document.querySelectorAll(".colection-two");
 let colectionFour = document.querySelectorAll(".colection-four");
 
-// Submit button
-let submitBtn = document.getElementById("submit-btn");
-
-// Add
+// Add offers <option> to <select> element
 const applyOffersToHtml = () => {
   for (let key in offers) {
     let optionElement = document.createElement("option");
     optionElement.value = offers[key];
     optionElement.textContent = offers[key];
-    offersSelect.appendChild(optionElement);
+    selectElement.appendChild(optionElement);
   }
 };
-
 applyOffersToHtml();
 
-offersSelect.addEventListener("change", showInputs);
+// Handle <select> change
+selectElement.addEventListener("change", showInputs);
 
 function showInputs() {
-  let selectedOffer = offersSelect.value;
+  let selectedOffer = selectElement.value;
   if (selectedOffer === offers.offerOne) {
-    console.log(1);
-    // Remove "required" from hiden inputs  (colectionTwo & colectionFour)
+    // Remove "required" from hiden inputs  (colectionTwoInputs & colectionFourInputs)
     for (let i = 0; i < colectionTwo.length; i++) {
       colectionTwo[i].removeAttribute("required");
     }
@@ -48,42 +45,38 @@ function showInputs() {
       colectionFour[i].removeAttribute("required");
     }
 
-    // Hide inputs
+    // Hide inputs box
     inputsTwoCard.style.display = "none";
     inputsFourCard.style.display = "none";
   } else if (
     selectedOffer === offers.offerTwo ||
     selectedOffer === offers.offerThree
   ) {
-    console.log("2 or 3");
-    // Remove "required" from hiden inputs (colectionFour)
+    extraInputsTitle.innerHTML = "بيانات البطاقة الإضافية";
+    inputsTwoCard.style.display = "block";
+    inputsFourCard.style.display = "none";
+
+    // Remove "required" from hiden inputs (colectionFourInputs)
     for (let i = 0; i < colectionFour.length; i++) {
       colectionFour[i].removeAttribute("required");
     }
-
     // Add "required" to showen inputs (colectionTwo)
     for (let i = 0; i < colectionTwo.length; i++) {
       colectionTwo[i].setAttribute("required", "");
     }
-
-    extraInputsTitle.innerHTML = "بيانات البطاقة الإضافية";
-    inputsTwoCard.style.display = "block";
-    inputsFourCard.style.display = "none";
   } else if (selectedOffer === offers.offerFour) {
-    console.log(4);
+    extraInputsTitle.innerHTML = "بيانات البطاقات الإضافية";
+    inputsTwoCard.style.display = "block";
+    inputsFourCard.style.display = "block";
+
     // Add "required" to showen inputs (colectionFour)
     for (let i = 0; i < colectionFour.length; i++) {
       colectionFour[i].setAttribute("required", "");
     }
-
     // Add "required" to showen inputs (colectionTwo)
     for (let i = 0; i < colectionTwo.length; i++) {
       colectionTwo[i].setAttribute("required", "");
     }
-
-    extraInputsTitle.innerHTML = "بيانات البطاقات الإضافية";
-    inputsTwoCard.style.display = "block";
-    inputsFourCard.style.display = "block";
   }
 }
 
@@ -91,12 +84,16 @@ function showInputs() {
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbxMjDlzvAEXFDlFXFcno5dWYS9oUImYXxS8j1G_RrNSFajF1PqjgIpX9USLpap9E2uw/exec";
 
-const form = document.forms["submit-to-google-sheet"];
+// form
+let form = document.forms["submit-to-google-sheet"];
+// Submit button
+let submitBtn = document.getElementById("submit-btn");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-
+  // disable button until submit finish
   submitBtn.setAttribute("disabled", "");
+  // Run bootstrap spinner
   submitBtn.innerHTML =
     '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>';
 
@@ -107,16 +104,22 @@ form.addEventListener("submit", async (e) => {
     });
 
     console.log("Success!", response);
+    window.location.href = "./thankyou.html"; // Go to thank you page
 
-    window.location.href = "./thankyou.html";
+    // Print data for testing
+    // const z  = new FormData(form)
+    // for (let entry of z.entries()) {
+    //   console.log(entry);
+    // }
+    
   } catch (error) {
-    submitBtn.removeAttribute("disabled");
-    submitBtn.innerHTML = "اطلب";
     console.error("Error!", error.message);
+    submitBtn.removeAttribute("disabled"); // Active btn
+    submitBtn.innerHTML = "اطلب"; //Replace spinner to "اطلب"
   }
 });
 
-// Hide sidebar(offcanvas) when click on any nav link in small screen
+// Hide sidebar(offcanvas)  on click on any nav link (in small screen)
 let navLinks = document.querySelectorAll(".anchor");
 
 navLinks.forEach((navLink) => {
@@ -125,5 +128,5 @@ navLinks.forEach((navLink) => {
 
 function clickOnCloseBtn() {
   let btn = document.getElementsByClassName("btn-close")[0];
-  btn.click();
+  btn.click(); // click on hiden close btn
 }
