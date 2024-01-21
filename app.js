@@ -6,6 +6,7 @@ let offers = {
   offerFour: "4 بطاقات لمدة سنة بـ 300 ريال",
 };
 
+
 // Select element <select></select>
 let selectElement = document.getElementById("offers");
 
