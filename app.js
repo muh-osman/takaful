@@ -83,7 +83,7 @@ function showInputs() {
 
 // Handle form data
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbxmHH9J6ee7DSQhncrxnqPnPcoS9ozdHOitKoRc-7d1TBtnVA8Dd-IlxXaqKeNAPyC5/exec";
+  "https://script.google.com/macros/s/AKfycbzBCmQquojao-RXr-IcT-onwZwyLd_9gE6qkUd7iPVSQ9Egk3IptKElquFFWBbfn7bVeA/exec";
 
 // form
 let form = document.forms["submit-to-google-sheet"];
